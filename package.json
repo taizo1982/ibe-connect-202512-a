@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run optimize:images && vite build",
+    "build": "npm run optimize:images && vite build && node ./scripts/inject-analytics-html.mjs",
     "optimize:images": "node ./scripts/optimize-images.mjs",
     "build:ssr": "vite build --ssr src/entry-server.tsx --outDir build/server",
     "build:ssg": "npm run build && npm run build:ssr && node ./scripts/prerender.mjs",
