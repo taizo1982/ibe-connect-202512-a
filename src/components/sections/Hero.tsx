@@ -42,7 +42,7 @@ export function Hero() {
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-sm">
               <Calendar className="w-6 h-6 mx-auto mb-1 text-primary-pink" />
               <p className="text-xs text-gray-500">開催日</p>
-              <p className="text-sm font-bold text-gray-800">2月28日（金）</p>
+              <p className="text-sm font-bold text-gray-800">2月28日（土）</p>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-sm">
