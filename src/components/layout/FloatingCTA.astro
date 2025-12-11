@@ -1,0 +1,48 @@
+---
+import event from '../../data/event.json';
+---
+
+<div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden transform translate-y-full transition-transform duration-300">
+  <div class="bg-white/95 backdrop-blur-md shadow-top p-4">
+    <a
+      href={event.entryUrl}
+      class="block w-full bg-gradient-cta text-white text-center font-bold py-4 rounded-full shadow-lg"
+    >
+      今すぐ申し込む
+    </a>
+  </div>
+</div>
+
+<script>
+  const floatingCTA = document.getElementById('floating-cta');
+  const hero = document.querySelector('#hero');
+  const closing = document.querySelector('#closing');
+
+  const updateFloatingCTA = () => {
+    const heroRect = hero?.getBoundingClientRect();
+    const closingRect = closing?.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Show after scrolling past hero and before reaching closing
+    const pastHero = heroRect ? heroRect.bottom < 0 : false;
+    const beforeClosing = closingRect ? closingRect.top > windowHeight : true;
+
+    if (pastHero && beforeClosing) {
+      floatingCTA?.classList.remove('translate-y-full');
+    } else {
+      floatingCTA?.classList.add('translate-y-full');
+    }
+  };
+
+  window.addEventListener('scroll', updateFloatingCTA);
+  updateFloatingCTA();
+</script>
+
+<style>
+  .shadow-top {
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .shadow-lg {
+    box-shadow: 0 4px 15px rgba(232, 122, 147, 0.4);
+  }
+</style>

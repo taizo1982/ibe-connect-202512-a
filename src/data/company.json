@@ -1,0 +1,21 @@
+{
+  "name": "一般社団法人アイビーコネクト",
+  "nameEn": "IBE CONNECT",
+  "type": "一般社団法人（非営利団体）",
+  "address": "〒525-0058 滋賀県草津市野路1-12-11-107",
+  "phone": "090-6231-1582",
+  "hours": "10:00〜20:00（年中無休）",
+  "website": "https://ibeconnect.net",
+  "contact": "https://ibeconnect.net/contact/",
+  "copyright": "2025 真剣婚活サポート",
+  "links": {
+    "about": "https://ibeconnect.net/about/",
+    "faq": "https://ibeconnect.net/qa/",
+    "party": "https://ibeconnect.net/party/",
+    "contact": "https://ibeconnect.net/contact/",
+    "privacy": "https://ibeconnect.net/policy/",
+    "terms": "https://ibeconnect.net/terms/",
+    "tokusyo": "https://ibeconnect.net/tokusyo/",
+    "outline": "https://ibeconnect.net/outline/"
+  }
+}

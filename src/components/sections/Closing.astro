@@ -1,0 +1,50 @@
+---
+import Button from '../common/Button.astro';
+import event from '../../data/event.json';
+---
+
+<section id="closing" class="section-padding bg-gradient-hero relative overflow-hidden">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight mb-6 fade-in-up text-balance">
+        「ちゃんと向き合って話せる出会い」を、<br class="hidden sm:inline" />次の一歩に。
+      </h2>
+
+      <div class="text-gray-600 text-lg leading-relaxed mb-10 fade-in-up">
+        <p class="mb-4">
+          メッセージと写真だけでは分からない"人柄"を、<br class="hidden md:inline" />
+          最初から対面で感じられる出会いの場を選ぶことは、<br class="hidden md:inline" />
+          <span class="font-medium text-gray-800">あなたの時間と心を大切にすること</span>でもあります。
+        </p>
+
+        <p>
+          アプリに少し疲れてしまった今こそ、<br class="hidden md:inline" />
+          一度立ち止まって、「会って話す」出会い方を選んでみませんか。
+        </p>
+      </div>
+
+      <div class="fade-in-up">
+        <Button href={event.entryUrl} size="xl" pulse={true}>
+          {event.title} に申し込む
+        </Button>
+
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+          <span class="bg-white/80 text-gray-600 px-4 py-2 rounded-full text-sm">
+            {event.dateDisplay}
+          </span>
+          <span class="bg-white/80 text-gray-600 px-4 py-2 rounded-full text-sm">
+            {event.time.start}〜{event.time.end}
+          </span>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-6">
+          ※定員になり次第締切／1人参加・婚活初心者歓迎
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative elements -->
+  <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-primary-pink/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -top-32 -right-32 w-64 h-64 bg-primary-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+</section>
