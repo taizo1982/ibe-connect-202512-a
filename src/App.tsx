@@ -11,6 +11,7 @@ import { EventInfo } from '@/components/sections/EventInfo'
 import { FAQ } from '@/components/sections/FAQ'
 import { Closing } from '@/components/sections/Closing'
 import { Footer } from '@/components/sections/Footer'
+import { Sponsors } from '@/components/sections/Sponsors'
 import { FloatingCTA } from '@/components/sections/FloatingCTA'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <EventInfo />
         <FAQ />
         <Closing />
+        <Sponsors />
       </main>
       <Footer />
       <FloatingCTA />

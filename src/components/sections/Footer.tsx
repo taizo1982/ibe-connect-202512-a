@@ -1,17 +1,17 @@
 import company from '@/data/company.json'
+import logoWhite from '@/assets/images/logo-white.webp'
 
 export function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between gap-8 mb-8">
-            <div>
-              <h3 className="font-display font-bold text-lg mb-2">{company.name}</h3>
-              <p className="text-gray-400 text-sm">{company.type}</p>
-            </div>
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <a href={company.url}>
+              <img src={logoWhite} alt={company.name} className="h-12" />
+            </a>
 
-            <div className="flex flex-wrap gap-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a href={company.links.about} className="text-gray-400 hover:text-white transition-colors">
                 団体概要
               </a>
